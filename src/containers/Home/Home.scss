@@ -6,7 +6,7 @@
   }
 }
 .masthead {
-  background: #2d2d2d;
+  background: #333333;
   padding: 40px 20px;
   color: white;
   text-align: center;
@@ -15,9 +15,9 @@
     margin: auto;
     height: $size;
     width: $size;
-    border-radius: $size / 2;
-    border: 1px solid $cyan;
-    box-shadow: inset 0 0 10px $cyan;
+    //border-radius: $size / 2;
+    //border: 1px solid $white;
+    //box-shadow: inset 0 0 10px $white;
     vertical-align: middle;
     p {
       line-height: $size;
@@ -29,7 +29,7 @@
     }
   }
   h1 {
-    color: $cyan;
+    color: $white;
     font-size: 4em;
   }
   h2 {
