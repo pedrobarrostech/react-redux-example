@@ -3,10 +3,32 @@
  *
 */
 
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(http://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
 body{
   background-color:#111;
 }
-
 
 .navbar-brand {
   position: relative;
@@ -19,12 +41,12 @@ body{
   border-bottom:1px solid #222;
 }
 
-.navbar-default .navbar-nav  a{
+.navbar-default .navbar-nav a{
   color:#ddd;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-  color:#b7b7b7;
+  color:#fff;
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -33,3 +55,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
   color: #fff;
   background-color: #4e4e4e;
 }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+    color:#fff;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand  {
+  color:#fff;
+}
+
+
+

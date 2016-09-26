@@ -4,7 +4,6 @@ import { isLoaded as isAuthLoaded, load as loadAuth } from 'redux/modules/auth';
 import {
     App,
     Home,
-    Widgets,
     About,
     Login,
     LoginSuccess,
@@ -38,16 +37,9 @@ export default (store) => {
       { /* Home (main) route */ }
       <IndexRoute component={Home}/>
 
-      { /* Routes requiring login */ }
-      <Route onEnter={requireLogin}>
-        <Route path="loginSuccess" component={LoginSuccess}/>
-      </Route>
-
       { /* Routes */ }
       <Route path="sobre" component={About}/>
-      <Route path="login" component={Login}/>
-      <Route path="survey" component={Survey}/>
-      <Route path="widgets" component={Widgets}/>
+      <Route path="contato" component={Survey}/>
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />
