@@ -2,8 +2,8 @@ import React, {Component, PropTypes} from 'react';
 import {reduxForm} from 'redux-form';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import surveyValidation from './surveyValidation';
-import * as surveyActions from 'redux/modules/survey';
+import contactValidation from './contactValidation';
+import * as contactActions from 'redux/modules/contact';
 
 function asyncValidate(data, dispatch, {isValidEmail}) {
   if (!data.email) {
@@ -12,17 +12,17 @@ function asyncValidate(data, dispatch, {isValidEmail}) {
   return isValidEmail(data);
 }
 @connect(() => ({}),
-  dispatch => bindActionCreators(surveyActions, dispatch)
+  dispatch => bindActionCreators(contactActions, dispatch)
 )
 @reduxForm({
-  form: 'survey',
+  form: 'contact',
   fields: ['name', 'email', 'occupation', 'currentlyEmployed', 'sex'],
-  validate: surveyValidation,
+  validate: contactValidation,
   asyncValidate,
   asyncBlurFields: ['email']
 })
 export default
-class SurveyForm extends Component {
+class ContactForm extends Component {
   static propTypes = {
     active: PropTypes.string,
     asyncValidating: PropTypes.bool.isRequired,
@@ -47,7 +47,7 @@ class SurveyForm extends Component {
       pristine,
       valid
       } = this.props;
-    const styles = require('./SurveyForm.scss');
+    const styles = require('./ContactForm.scss');
     const renderInput = (field, label, showAsyncValidating) =>
       <div className={'form-group' + (field.error && field.touched ? ' has-error' : '')}>
         <label htmlFor={field.name} className="col-sm-2">{label}</label>

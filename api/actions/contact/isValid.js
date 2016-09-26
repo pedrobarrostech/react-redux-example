@@ -1,4 +1,4 @@
-export default function survey(req) {
+export default function contact(req) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const errors = {};
