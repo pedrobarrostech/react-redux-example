@@ -27,25 +27,16 @@ class ContactForm extends Component {
     active: PropTypes.string,
     asyncValidating: PropTypes.bool.isRequired,
     fields: PropTypes.object.isRequired,
-    dirty: PropTypes.bool.isRequired,
     handleSubmit: PropTypes.func.isRequired,
-    resetForm: PropTypes.func.isRequired,
-    invalid: PropTypes.bool.isRequired,
-    pristine: PropTypes.bool.isRequired,
-    valid: PropTypes.bool.isRequired
+    resetForm: PropTypes.func.isRequired
   }
 
   render() {
     const {
       asyncValidating,
-      dirty,
       fields: {name, email, occupation, currentlyEmployed, sex},
-      active,
       handleSubmit,
-      invalid,
-      resetForm,
-      pristine,
-      valid
+      resetForm
       } = this.props;
     const styles = require('./ContactForm.scss');
     const renderInput = (field, label, showAsyncValidating) =>
@@ -97,32 +88,7 @@ class ContactForm extends Component {
           </div>
         </form>
 
-        <h4>Props from redux-form</h4>
 
-        <table className="table table-striped">
-          <tbody>
-          <tr>
-            <th>Active Field</th>
-            <td>{active}</td>
-          </tr>
-          <tr>
-            <th>Dirty</th>
-            <td className={dirty ? 'success' : 'danger'}>{dirty ? 'true' : 'false'}</td>
-          </tr>
-          <tr>
-            <th>Pristine</th>
-            <td className={pristine ? 'success' : 'danger'}>{pristine ? 'true' : 'false'}</td>
-          </tr>
-          <tr>
-            <th>Valid</th>
-            <td className={valid ? 'success' : 'danger'}>{valid ? 'true' : 'false'}</td>
-          </tr>
-          <tr>
-            <th>Invalid</th>
-            <td className={invalid ? 'success' : 'danger'}>{invalid ? 'true' : 'false'}</td>
-          </tr>
-          </tbody>
-        </table>
       </div>
     );
   }

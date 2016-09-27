@@ -30,22 +30,12 @@ export default class Contact extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Contact</h1>
-        <Helmet title="Contact"/>
+        <h1>Contato</h1>
+        <Helmet title="Contato"/>
 
         <p>
-          This is an example of a form in redux in which all the state is kept within the redux store.
-          All the components are pure "dumb" components.
+          Lorem ipsum
         </p>
-
-        <div style={{textAlign: 'center', margin: 15}}>
-          <button className="btn btn-primary" onClick={this.handleInitialize}>
-            <i className="fa fa-pencil"/> Initialize Form
-          </button>
-        </div>
-
-        <p>The circles to the left of the inputs correspond to flags provided by <code>redux-form</code>:
-          Touched, Visited, Active, and Dirty.</p>
 
         <ContactForm onSubmit={this.handleSubmit}/>
       </div>

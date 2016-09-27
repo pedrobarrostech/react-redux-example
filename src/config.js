@@ -18,7 +18,7 @@ module.exports = Object.assign({
     title: 'Artwork Tattoo',
     description: 'Studio',
     head: {
-      titleTemplate: 'Artwork Tattoo: %s',
+      titleTemplate: 'Artwork Tattoo - %s',
       meta: [
         {name: 'description', content: 'Studio'},
         {charset: 'utf-8'},
